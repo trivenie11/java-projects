@@ -25,4 +25,4 @@ System.out.println("The number is divisible by 3 and hasn't been tampered with."
 System.out.println("The number is not divisible by 3 and has been tampered with.");
 }
 }
-}
+} 
