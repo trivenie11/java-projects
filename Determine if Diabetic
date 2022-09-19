@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Project {
+public static void main(String[] args) {
+String symptom1 = "";
+String symptom2 = "";
+String symptom3 = "";
+String symptom4 = "";
+String symptom5 = "";
+int counter = 0;
+Scanner sc = new Scanner(System.in);
+
+System.out.println("Please answer yes or no:");
+
+System.out.println("Do you experience night sweats?");
+symptom1 = sc.next();
+System.out.println("Is your glucose level above 7?");
+symptom2 = sc.next();
+System.out.println("Is your HBA above 8?");
+symptom3 = sc.next();
+System.out.println("Do you experience tiredness?");
+symptom4 = sc.next();
+System.out.println("Do you have a positive glucose tolerance test?");
+symptom5 = sc.next();
+
+String[] symptoms = {symptom1, symptom2, symptom3, symptom4, symptom5};
+
+for (String index: symptoms){
+if (index.equals("yes")){
+counter = counter + 1;
+}
+}
+if(counter >= 3){
+System.out.println("The patient is diabetic.");
+} else {
+System.out.println("The patient is not diabetic.");
+}
+}
