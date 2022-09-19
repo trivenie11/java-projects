@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Project {
+public static void main(String[] args){
+int hospitalNumber = 0;
+int sum = 0;
+Scanner sc = new Scanner(System.in);
+
+System.out.println("Please provide your 10-digit hospital number:");
+
+hospitalNumber = sc.nextInt();
+
+while (hospitalNumber > 9){
+while (hospitalNumber > 0 ) { //
+sum = sum + (hospitalNumber % 10);
+hospitalNumber = hospitalNumber / 10;
+}
+hospitalNumber = sum;
+sum = 0;
+}
+
+if (hospitalNumber == 9 || hospitalNumber == 6 || hospitalNumber == 3){
+System.out.println("The number is divisible by 3 and hasn't been tampered with.");
+}else {
+System.out.println("The number is not divisible by 3 and has been tampered with.");
+}
+}
+}
