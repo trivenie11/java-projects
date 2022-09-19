@@ -1,0 +1,88 @@
+import java.util.Scanner;
+
+public class Project {
+public static void main(String[] args) {
+String hospitalNumber = "";
+String gender = "";
+String dobDay = "";
+String dobMonth = "";
+String dobYear = "";
+String medicalAid = "";
+String employed = "";
+Scanner sc = new Scanner(System.in);
+
+System.out.println("Please provide your 10-digit hospital number:");
+hospitalNumber = sc.nextLine();
+
+String[] numberArray = hospitalNumber.split("(?!^.,)");
+
+gender = numberArray[0];
+dobDay = numberArray[1] + numberArray[2];
+dobMonth = numberArray[3] + numberArray[4];
+dobYear = numberArray[5] + numberArray[6];
+medicalAid = numberArray[8];
+employed = numberArray[9];
+
+System.out.println(gender.getClass().getSimpleName());
+
+if (gender.equals("1")){
+System.out.println("Gender: Male");
+} else {
+System.out.println("Gender: Female");
+}
+switch(dobMonth){
+case "01":
+dobMonth = "January";
+break;
+case "02":
+dobMonth = "February";
+break;
+case "03":
+dobMonth = "March";
+break;
+case "04":
+dobMonth = "April";
+break;
+case "05":
+dobMonth = "May";
+break;
+case "06":
+dobMonth = "June";
+break;
+case "07":
+dobMonth = "July";
+break;
+case "08":
+dobMonth = "August";
+break;
+case "09":
+dobMonth = "September";
+break;
+case "10":
+dobMonth = "October";
+break;
+case "11":
+dobMonth = "November";
+break;
+case "12":
+dobMonth = "December";
+break;
+default:
+break;
+}
+
+System.out.println("Date of Birth: " + dobDay + " " + dobMonth + " " + dobYear);
+
+if (medicalAid.equals("1")){
+System.out.println("The patient has medical aid.");
+} else {
+System.out.println("The patient does not have medical aid.");
+}
+
+if (employed.equals("1")){
+System.out.println("The patient is employed.");
+} else {
+System.out.println("The patient is not employed.");
+}
+}
+}
