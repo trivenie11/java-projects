@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Project {
+
+public static void main(String[] args) {
+
+int W, H, A, dosage;
+Scanner sc = new Scanner(System.in);
+
+System.out.println("Enter your weight in kg:");
+W = sc.nextInt();
+	
+System.out.println("Enter your height in cm:");
+H = sc.nextInt();
+	
+System.out.println("Enter your age:");
+A = sc.nextInt();
+
+sc.close();
+
+dosage = (A*7+(H^6)-W)/A;
+System.out.println("\nThe insulin dosage is " + dosage);
+}
+} 
